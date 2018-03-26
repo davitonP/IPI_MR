@@ -1,40 +1,68 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<?php
+require_once 'conexion.php';
+?>
 
-<div class="container">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>welcome</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  </head>
+  <body>
     <div class="row">
-        <div class="col-md-offset-5 col-md-4">
-            <div class="form-login">
-              <h4>Bienvenido</h4>
-              <input type="text" id="userName" class="form-control input-sm chat-input" placeholder="Nombre de usuario" />
-              </br>
-              <input type="password" id="userPassword" class="form-control input-sm chat-input" placeholder="contraseña" />
-              </br>
-              <div class="wrapper">
-              <span class="group-btn">
-                  <a href="welcome.php" class="btn btn-primary btn-md">Entrar <i class="fa fa-sign-in"></i></a>
-              </span>
-              </div>
-            </div>
+      <div class="col s4">
 
-            <div class="form-Register">
-            <h4>Registrate</h4>
-            <input type="text" id="userNameR" class="form-control input-sm chat-input" placeholder="Nombre de usuario" />
-            </br>
-            <input type="text" id="usermailR" class="form-control input-sm chat-input" placeholder="Correo electronico" />
-            </br>
-            <input type="password" id="userPasswordR" class="form-control input-sm chat-input" placeholder="contraseña" />
-            </br>
-            <div class="wrapper">
-            <span class="group-btn">
-                <a href="/movieR/welcome" class="btn btn-primary btn-md">Registro <i class="fa fa-sign-in"></i></a>
-            </span>
-            </div>
-            </div>
-
+      </div>
+      <form class="col s4">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
         </div>
-
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="col s1">
+          <input type="submit" name="Enviar" value="Entrar">
+        </div>
+      </form>
     </div>
-</div>
+
+
+    <div class="row">
+      <div class="col s4">
+
+      </div>
+    <form class="col s4">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="name" type="text" class="validate">
+          <label for="name">Nombre</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      <div class="col s1">
+        <input type="submit" name="Enviar" value="Registrarse">
+      </div>
+    </form>
+  </div>
+  </body>
+</html>
