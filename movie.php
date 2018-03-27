@@ -1,4 +1,5 @@
 <?php
+include ('conexion.php');
 $directorio = 'static/movies/Terror/';
 
 echo "

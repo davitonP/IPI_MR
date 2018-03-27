@@ -17,7 +17,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
     </a>
-    <!-- <img src="{{ img }}"><br><br> -->
     <h4><b>Categorias</b></h4>
 
   </div>
@@ -44,7 +43,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
 
-<div class='w3-row-padding'>
+<div>
 <?php
 include ('movie.php');
 ?>
@@ -53,16 +52,6 @@ include ('movie.php');
 </div>
 
 <script>
-// Script to open and close sidebar
-// function w3_open() {
-//     document.getElementById("mySidebar").style.display = "block";
-//     document.getElementById("myOverlay").style.display = "block";
-// }
-//
-// function w3_close() {
-//     document.getElementById("mySidebar").style.display = "none";
-//     document.getElementById("myOverlay").style.display = "none";
-// }
 </script>
 
 </body>
