@@ -6,9 +6,28 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+<!-- <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-</style>
+</style> -->
+
+<script type="text/javascript">
+  function movies(cat) {
+    console.log(cat);
+    var formData = new FormData();
+    formData.append('cat',cat);
+    var req = new XMLHttpRequest();
+    req.onreadystatechange = function() {
+      if (req.readyState == 4 && req.status == 200) {
+        document.getElementById('movies').innerHTML = req.responseText;
+      }
+    }
+    req.open('POST','movie.php',true);
+    req.send(formData);
+    // document.getElementById('movies').innerHTML =
+  }
+</script>
+
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
@@ -21,9 +40,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   </div>
   <div class="w3-bar-block">
-    <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i></i>Accion</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i></i>Ciencia Ficcion</a>
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i></i>Terror</a>
+    <a  onclick="movies('accion')" class="w3-bar-item w3-button"><i></i>Accion</a>
+    <a  onclick="movies('cienciaF')" class="w3-bar-item w3-button w3-padding"><i></i>Ciencia Ficcion</a>
+    <a  onclick="movies('terror')" class="w3-bar-item w3-button w3-padding"><i></i>Terror</a>
   </div>
 </nav>
 
@@ -43,10 +62,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
   </header>
 
-<div>
-<?php
-include ('movie.php');
-?>
+<div id="movies">
+<!-- <?php
+// include ('movie.php');
+?> -->
 </div>
 
 </div>
