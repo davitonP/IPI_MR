@@ -14,8 +14,6 @@
       var forData = new FormData();
       forData.append('email',usr);
       forData.append('password',pass);
-      console.log(usr);
-      console.log(pass);
       var req = new XMLHttpRequest();
       req.onreadystatechange = function() {
         if (req.readyState == 4 && req.status == 200) {
@@ -25,18 +23,13 @@
       req.open('POST','getUser.php',true);
       req.send(forData);
     }
-
   </script>
-  <style type="text/css">
-    
-  </style>
-
   <body>
     <div class="row">
       <div class="col s4">
-
+        <?php echo $_POST['movie']; ?>
       </div>
-      <form class="col s4"  name="users" method="POST" action="getUser.php">
+      <form class="col s4"  name="users" method="POST" action="viewMovie.php">
         <div class="row">
           <div class="input-field col s12" name="email">
             <input id="email" name="email" type="email" class="validate">
@@ -49,41 +42,16 @@
             <label for="password">Password</label>
           </div>
         </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="card" name="card" type="number" class="validate">
+            <label for="Tarjeta de credito">Tarjeta de credito</label>
+          </div>
+        </div>
         <div class="col s1">
           <input type="submit" name="Enviar" value="Entrar">
         </div>
       </form>
     </div>
-
-
-    <div class="row">
-      <div class="col s4">
-
-      </div>
-    <form class="col s4">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
-          <label for="name">Nombre</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="col s1">
-        <input type="submit" name="Enviar" value="Registrarse">
-      </div>
-    </form>
-  </div>
-  <a class="waves-effect waves-light btn" href="welcome.php">welcome</a>
   </body>
 </html>

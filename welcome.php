@@ -12,7 +12,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <script type="text/javascript">
   function movies(cat) {
-    console.log(cat);
     var formData = new FormData();
     formData.append('cat',cat);
     var req = new XMLHttpRequest();
@@ -23,7 +22,22 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     }
     req.open('POST','movie.php',true);
     req.send(formData);
-    // document.getElementById('movies').innerHTML =
+  }
+
+  function rentar(pelicula) {
+    console.log("has rentado una pelicula\n");
+    console.log(pelicula);
+    window.location="rent.php";
+    // var formData = new FormData();
+    // formData.append('movie',pelicula);
+    // var req = new XMLHttpRequest();
+    // req.onreadystatechange = function() {
+    //   if (req.readyState == 4 && req.status == 200) {
+    //     document.getElementById('movies').innerHTML = req.responseText;
+    //   }
+    // }
+    // req.open('POST','rent.php',true);
+    // req.send(formData);
   }
 </script>
 
@@ -63,9 +77,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
 
 <div id="movies">
-<!-- <?php
-// include ('movie.php');
-?> -->
+  <<?php require_once('estrenos.php') ?>
 </div>
 
 </div>
