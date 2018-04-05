@@ -12,6 +12,11 @@ $result = mysqli_query($enlace,$query) or die(mysqli_error($enlace));
 while (($fila = mysqli_fetch_array($result)) != NULL) {
   $aux = $fila['title'];
   $desc = utf8_decode($fila['description']);
+  $x = strlen ($desc);
+  $l =20;
+  if  ($x > $l) {
+    $desc =  substr($desc, 0 , 300) . " ...";
+  }
   $aux1 = str_replace(" ","",$aux);
   $r  = "rentar("."'".$aux."'".")";
   // <button onclick=\"".$r."\" type='button' name='button'>Rentar</button>

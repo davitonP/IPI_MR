@@ -9,7 +9,6 @@ $result = mysqli_query($enlace,$query) or die(mysqli_error($enlace));
 $aux = true;
 while (($fila = mysqli_fetch_array($result)) != NULL) {
   if ($fila['email'] == $_POST['email'] && $fila['password'] == $_POST['password']) {
-    //
     $aux = false;
   }
 }

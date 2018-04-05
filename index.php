@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
   </head>
+
   <script type="text/javascript">
     function isUser() {
       usr = document.users.email.value;
@@ -28,61 +29,86 @@
 
   </script>
   <style type="text/css">
-    
+  body{
+    color: black;
+    font-family: Verdana;
+    background-color: white;
+    }
+
+  #login{
+    border: white 20px solid;
+    /* border-top: black 20px hidden; */
+    background: white;
+  }
+  body{
+  background: #808076;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#r{
+  background: #808076;
+  width: 50px
+}
+
   </style>
 
   <body>
     <div class="row">
-      <div class="col s4">
+      <div id="l1"class="col s4">
 
       </div>
-      <form class="col s4"  name="users" method="POST" action="getUser.php">
-        <div class="row">
-          <div class="input-field col s12" name="email">
-            <input id="email" name="email" type="email" class="validate">
-            <label for="email">Email</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" name="password" type="password" class="validate">
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="col s1">
-          <input type="submit" name="Enviar" value="Entrar">
-        </div>
-      </form>
-    </div>
 
+<div id="login" class="col s4">
+  <div id="r"class="row">
 
-    <div class="row">
-      <div class="col s4">
-
-      </div>
-    <form class="col s4">
+  </div>
+  <div class="row">
+    <form class=""  name="users" method="POST" action="getUser.php">
       <div class="row">
-        <div class="input-field col s12">
-          <input id="name" type="text" class="validate">
-          <label for="name">Nombre</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
+        <div class="input-field col s12" name="email">
+          <input id="email" name="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
+          <input id="password" name="password" type="password" class="validate">
           <label for="password">Password</label>
         </div>
       </div>
       <div class="col s1">
-        <input type="submit" name="Enviar" value="Registrarse">
+        <input type="submit" name="Enviar" value="Entrar">
       </div>
     </form>
+
+
+      <form class="">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="name" type="text" class="validate">
+            <label for="name">Nombre</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="col s1">
+          <input type="submit" name="Enviar" value="Registrarse">
+        </div>
+      </form>
+    </div>
+    </div>
+
   </div>
   <a class="waves-effect waves-light btn" href="welcome.php">welcome</a>
   </body>

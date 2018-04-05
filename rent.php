@@ -24,12 +24,36 @@
       req.send(forData);
     }
   </script>
+  <style type="text/css">
+  body{
+    color: black;
+    font-family: Verdana;
+    background-color: white;
+    }
+
+  #login{
+    border: white 20px solid;
+    /* border-top: black 20px hidden; */
+    background: white;
+  }
+  body{
+  background: #808076;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#r{
+  background: #808076;
+  width: 50px
+}
+
+  </style>
   <body>
     <div class="row">
       <div class="col s4">
-        <?php echo $_POST['movie']; ?>
+
       </div>
-      <form class="col s4"  name="users" method="POST" action="viewMovie.php">
+      <form id="login"class="col s4"  name="users" method="POST" action="viewMovie.php">
         <div class="row">
           <div class="input-field col s12" name="email">
             <input id="email" name="email" type="email" class="validate">
@@ -48,6 +72,7 @@
             <label for="Tarjeta de credito">Tarjeta de credito</label>
           </div>
         </div>
+        <input type="hidden" id='movie' name="movie" value="<?php echo $_POST['movie'];?>">
         <div class="col s1">
           <input type="submit" name="Enviar" value="Entrar">
         </div>
