@@ -57,6 +57,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a  onclick="movies('accion')" class="w3-bar-item w3-button"><i></i>Accion</a>
     <a  onclick="movies('cienciaF')" class="w3-bar-item w3-button w3-padding"><i></i>Ciencia Ficcion</a>
     <a  onclick="movies('terror')" class="w3-bar-item w3-button w3-padding"><i></i>Terror</a>
+    <a  href="viewMovie.php" class="w3-bar-item w3-button w3-padding"><i></i>Mis peliculas</a>
   </div>
 </nav>
 
@@ -77,7 +78,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   </header>
 
 <div id="movies">
-  <<?php require_once('estrenos.php') ?>
+  <?php require_once('estrenos.php') ?>
 </div>
 
 </div>

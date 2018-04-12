@@ -65,7 +65,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+<!-- <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container">
     <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
       <i class="fa fa-remove"></i>
@@ -78,7 +78,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a  onclick="movies('cienciaF')" class="w3-bar-item w3-button w3-padding"><i></i>Ciencia Ficcion</a>
     <a  onclick="movies('terror')" class="w3-bar-item w3-button w3-padding"><i></i>Terror</a>
   </div>
-</nav>
+</nav> -->
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
@@ -91,7 +91,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <div class="w3-container">
     <h1><b>Furia de Titanes</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
-
+      <!-- <input type="text" name="" value=""> -->
+      <a href="welcome.php" action="welcome.php" class="w3-button w3-white">Inicio</a>
     </div>
     </div>
   </header>
