@@ -12,16 +12,29 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
 <script type="text/javascript">
   function movies(cat) {
-    var formData = new FormData();
-    formData.append('cat',cat);
-    var req = new XMLHttpRequest();
-    req.onreadystatechange = function() {
-      if (req.readyState == 4 && req.status == 200) {
-        document.getElementById('movies').innerHTML = req.responseText;
+      if (cat == 'MisPeliculas') {
+          var formData = new FormData();
+          formData.append('cat',cat);
+          var req = new XMLHttpRequest();
+          req.onreadystatechange = function() {
+              if (req.readyState == 4 && req.status == 200) {
+                  document.getElementById('movies').innerHTML = req.responseText;
+              }
+          }
+          req.open('POST','viewMovie.php',true);
+          req.send(formData); 
+      } else {
+          var formData = new FormData();
+          formData.append('cat',cat);
+          var req = new XMLHttpRequest();
+          req.onreadystatechange = function() {
+              if (req.readyState == 4 && req.status == 200) {
+                  document.getElementById('movies').innerHTML = req.responseText;
+              }
+          }
+          req.open('POST','getmovie.php',true);
+          req.send(formData); 
       }
-    }
-    req.open('POST','getmovie.php',true);
-    req.send(formData);
   }
 
   function rentar(pelicula) {
@@ -59,7 +72,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <a  onclick="movies('accion')" class="w3-bar-item w3-button"><i></i>Accion</a>
     <a  onclick="movies('cienciaF')" class="w3-bar-item w3-button w3-padding"><i></i>Ciencia Ficcion</a>
     <a  onclick="movies('terror')" class="w3-bar-item w3-button w3-padding"><i></i>Terror</a>
-    <a  href="viewMovie.php" class="w3-bar-item w3-button w3-padding"><i></i>Mis peliculas</a>
+    <a  onclick="movies('MisPeliculas')" class="w3-bar-item w3-button w3-padding"><i></i>Mis Peliculas</a>
   </div>
 </nav>
 
@@ -78,7 +91,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     </div>
     </div>
   </header>
-
+  
 <div id="movies">
   <?php //require_once('getmovie.php') ?>
 </div>
