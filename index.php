@@ -27,6 +27,25 @@
       req.send(forData);
     }
 
+    function registerUser() {
+      name = document.register.name.value;
+      usr = document.register.email.value;
+      pass = document.register.password.value;
+      var forData = new FormData();
+      forData.append('email',usr);
+      forData.append('password',pass);
+      console.log(usr);
+      console.log(pass);
+      var req = new XMLHttpRequest();
+      req.onreadystatechange = function() {
+        if (req.readyState == 4 && req.status == 200) {
+          document.getElementById('chat').innerHTML = req.responseText;
+        }
+      }
+      req.open('POST','regisUser.php',true);
+      req.send(forData);
+    }
+
   </script>
   <style type="text/css">
   body{
@@ -83,22 +102,22 @@
     </form>
 
 
-      <form class="">
+      <form class="" name="register" method="POST" action="regisUser.php">
         <div class="row">
           <div class="input-field col s12">
-            <input id="name" type="text" class="validate">
+            <input id="name" name="name" type="text" class="validate">
             <label for="name">Nombre</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
+            <input id="email" name="email" type="email" class="validate">
             <label for="email">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
+            <input id="password" name="password" type="password" class="validate">
             <label for="password">Password</label>
           </div>
         </div>
