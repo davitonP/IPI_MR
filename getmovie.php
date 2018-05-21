@@ -1,15 +1,20 @@
 <?php
 include ('conexion.php');
 
-$categoria = $_POST['cat'];
-$directorio = 'static/movies/'.$categoria.'/';
+if ($_POST['cat'] != 'todo') {
+    $categoria = $_POST['cat'];
+    $directorio = 'static/movies/'.$categoria.'/';
+    $query = "SELECT * FROM movies WHERE category='".$categoria."'";
+} else {
+    $query = "SELECT * FROM movies";
+}
 
-$query = "SELECT * FROM movies WHERE category='".$categoria."'";
 
 $result = mysqli_query($enlace,$query) or die(mysqli_error($enlace));
 
 
 while (($fila = mysqli_fetch_array($result)) != NULL) {
+  $directorio = 'static/movies/'.$fila['category'].'/';
   $aux = $fila['title'];
   $desc = utf8_decode($fila['description']);
   $x = strlen ($desc);
