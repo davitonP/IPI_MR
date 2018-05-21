@@ -32,7 +32,7 @@ while (($fila = mysqli_fetch_array($result)) != NULL) {
         <p><b>".$aux."</b></p>
         <h10>".$desc."</h10>
         <h5>Precio: $".$fila['precio']."</h5>
-        <form action='rent.php' method='POST'>
+        <form action='rentar.php' method='POST'>
           <input type = 'hidden' name = 'movie' id='movie' value = ".$fila['id'].">
           <div class=''>
             <input type='submit' name='Enviar' value='Rentar'>
