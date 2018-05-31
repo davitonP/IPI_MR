@@ -22,7 +22,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
               }
           }
           req.open('POST','viewMovie.php',true);
-          req.send(formData); 
+          req.send(formData);
       } else {
           var formData = new FormData();
           formData.append('cat',cat);
@@ -33,7 +33,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
               }
           }
           req.open('POST','getmovie.php',true);
-          req.send(formData); 
+          req.send(formData);
       }
   }
 
@@ -80,18 +80,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+<div class="w3-main" style="margin-left:250px">
 
   <!-- Header -->
   <header id="portfolio">
     <div class="w3-container">
     <h1><b>Movie Rent</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
-
+        <a  onclick="movies('MisPeliculas')" class="w3-bar-item w3-button w3-padding"><i></i>Inicio</a>
+        <a  onclick="movies('MisPeliculas')" class="w3-bar-item w3-button w3-padding"><i></i>Mi perfil</a>
+        <a  href="/index.php" class="w3-bar-item w3-button w3-padding"><i></i>salir</a>
     </div>
     </div>
   </header>
-  
+
 <div id="movies">
   <?php //require_once('getmovie.php') ?>
 </div>
