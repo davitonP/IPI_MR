@@ -88,8 +88,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <h1><b>Movie Rent</b></h1>
     <div class="w3-section w3-bottombar w3-padding-16">
         <a  onclick="movies('MisPeliculas')" class="w3-bar-item w3-button w3-padding"><i></i>Inicio</a>
-        <a  onclick="movies('MisPeliculas')" class="w3-bar-item w3-button w3-padding"><i></i>Mi perfil</a>
-        <a  href="http://lcc.ens.uabc.mx/~al343157/IPI_MR/" class="w3-bar-item w3-button w3-padding"><i></i>salir</a>
+        <a  onclick="http:///localhost/~al343157/IPI_MR/perfil.php" class="w3-bar-item w3-button w3-padding"><i></i>Mi perfil</a>
+        <a  href="http:///localhost/~al343157/IPI_MR/" class="w3-bar-item w3-button w3-padding"><i></i>salir</a>
     </div>
     </div>
   </header>
